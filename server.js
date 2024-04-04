@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://mattianorisbusiness:MAD7389gva@whatsappstore.x0q
   const connectClient = () => {
     client = new Client({
       authStrategy: new RemoteAuth({
-        clientId: '1',
+        clientId: '2',
         store: store,
         backupSyncIntervalMs: 300000,
       }),
