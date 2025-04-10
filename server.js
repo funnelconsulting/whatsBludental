@@ -10,13 +10,13 @@ const mongoose = require('mongoose');
 let sessionObj = {};
 
 const knownEcp = {
-  _id: "64e5c95af74004ce77ee8170", 
-  name: "ARCHIMEDE FORMAZIONE SRL", 
-  groupName: "LeadSystem - Archimede Formazione", 
+  _id: "", 
+  name: "GFU bludental", 
+  groupName: "Lead GFU", 
   waId: {
     server: 'g.us',
-    user: '120363254016044512',
-    _serialized: '120363254016044512@g.us'
+    user: '120363418551934968',
+    _serialized: '120363418551934968@g.us'
   }
 };
 
@@ -59,7 +59,7 @@ mongoose.connect('mongodb+srv://mattianorisbusiness:MAD7389gva@whatsappstore.x0q
   client.on('ready', () => {
     console.log('Client is ready!');
     client.getChats().then(async(chats) => {
-      const group1 = chats.filter(c => c.name === "LeadSystem - Ares");
+      const group1 = chats.filter(c => c.name === "Lead GFU");
       console.log(group1);
     }).catch((err) => {
         console.error('Si è verificato un errore durante la ricerca della chat:', err);
