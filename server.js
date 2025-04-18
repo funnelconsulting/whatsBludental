@@ -83,9 +83,8 @@ mongoose.connect('mongodb+srv://mattianorisbusiness:MAD7389gva@whatsappstore.x0q
   app.post('/webhook-lead-bludental-notification', async (req, res) => {
     console.log(req.body)
     try {
-        const orientatrice = req.body.orientatrice; 
         const leads = req.body.leads;
-        const leadMessage = `È entrata una nuova lead! contattala subito.\n• ${leads.nome} ${leads.cognome} - ${leads.numeroTelefono}`;
+        const leadMessage = `Chiama la lead ${leads.nome} - ${leads.numeroTelefono}.\n• Appuntamento in data ${leads.appDate}.`;
         const { waId } = knownEcp;
 
             await client.sendMessage(waId._serialized, leadMessage)
